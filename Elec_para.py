@@ -3,7 +3,7 @@ import streamlit as st
 def Elec_Para(V, R, T):
         I = V / R  # Current: I = V / R
         P = I**2 * R  # Power: P = I^2 * R
-        H = I**2 * R * T /1000  # Heat: H = I^2 * R * T
+        H = I**2 * R * T   # Heat: H = I^2 * R * T
         return I, P, H
 
     
@@ -27,4 +27,4 @@ with col2:
                I, P, H = Elec_Para(V, R, T)
                st.write(f"Load Current (I): {I:.2f} A")
                st.write(f"Load Power (P): {P:.2f} W")
-               st.write(f"Heat Energy (H): {H:.2f} KWH")
+               st.write(f"Heat Energy (H): {H:.2f} WH")
